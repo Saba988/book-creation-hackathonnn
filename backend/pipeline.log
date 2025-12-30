@@ -1,0 +1,244 @@
+2025-12-29 15:07:36,485 - __main__ - INFO - Starting URL ingestion and embedding pipeline with graceful shutdown handling
+2025-12-29 15:07:36,486 - shutdown_handler - INFO - Starting pipeline with graceful shutdown handling
+2025-12-29 15:07:36,486 - shutdown_handler - INFO - Graceful shutdown handler initialized
+2025-12-29 15:07:36,486 - shutdown_handler - INFO - Pipeline shutdown handler configured
+2025-12-29 15:07:36,487 - pipeline - INFO - Starting ingestion for 1 URLs
+2025-12-29 15:07:36,487 - ingestion - INFO - Ingesting content from https://book-creation-hackathon-mu.vercel.app/ (attempt 1)
+2025-12-29 15:07:36,728 - ingestion - INFO - Successfully ingested 465 characters from https://book-creation-hackathon-mu.vercel.app/
+2025-12-29 15:07:36,729 - pipeline - INFO - Cleaning content from 1 URLs
+2025-12-29 15:07:36,729 - pipeline - INFO - Chunking content
+2025-12-29 15:07:36,730 - chunking - INFO - Chunked content from https://book-creation-hackathon-mu.vercel.app/ into 1 chunks (size: 1000, overlap: 200)
+2025-12-29 15:07:36,730 - pipeline - INFO - Generating embeddings for 1 chunks
+2025-12-29 15:07:40,028 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2025-12-29 15:07:40,042 - embedding - INFO - Processed batch 1 of embeddings (1 texts)
+2025-12-29 15:07:40,042 - embedding - INFO - Generated embeddings for 1 texts in 1787.36ms
+2025-12-29 15:07:40,042 - embedding - INFO - Added embeddings to 1 chunks
+2025-12-29 15:07:40,042 - pipeline - INFO - Storing embeddings in Qdrant
+2025-12-29 15:07:41,143 - storage - WARNING - Attempt 1 failed: [Errno 11001] getaddrinfo failed. Retrying in 1.0s...
+2025-12-29 15:07:42,144 - storage - WARNING - Attempt 2 failed: [Errno 11001] getaddrinfo failed. Retrying in 2.0s...
+2025-12-29 15:07:44,145 - storage - ERROR - All 3 attempts failed: [Errno 11001] getaddrinfo failed
+2025-12-29 15:07:44,146 - storage - ERROR - Error creating collection 'rag_content': [Errno 11001] getaddrinfo failed
+2025-12-29 15:07:44,146 - pipeline - ERROR - Error during storage: Failed to create collection: [Errno 11001] getaddrinfo failed
+2025-12-29 15:07:44,146 - pipeline - ERROR - Pipeline failed: Failed to create collection: [Errno 11001] getaddrinfo failed
+2025-12-29 15:07:44,146 - shutdown_handler - INFO - Pipeline completed with result: failed
+2025-12-29 15:07:44,146 - shutdown_handler - INFO - Graceful shutdown handler cleaned up
+2025-12-29 15:07:44,146 - __main__ - ERROR - Pipeline failed: Unknown error
+2025-12-29 15:16:51,779 - __main__ - INFO - Starting URL ingestion and embedding pipeline with graceful shutdown handling
+2025-12-29 15:16:51,780 - shutdown_handler - INFO - Starting pipeline with graceful shutdown handling
+2025-12-29 15:16:51,780 - shutdown_handler - INFO - Graceful shutdown handler initialized
+2025-12-29 15:16:51,781 - shutdown_handler - INFO - Pipeline shutdown handler configured
+2025-12-29 15:16:51,782 - pipeline - INFO - Starting ingestion for 1 URLs
+2025-12-29 15:16:51,782 - ingestion - INFO - Ingesting content from https://book-creation-hackathon-mu.vercel.app/ (attempt 1)
+2025-12-29 15:16:52,013 - ingestion - INFO - Successfully ingested 465 characters from https://book-creation-hackathon-mu.vercel.app/
+2025-12-29 15:16:52,015 - pipeline - INFO - Cleaning content from 1 URLs
+2025-12-29 15:16:52,016 - pipeline - INFO - Chunking content
+2025-12-29 15:16:52,016 - chunking - INFO - Chunked content from https://book-creation-hackathon-mu.vercel.app/ into 1 chunks (size: 1000, overlap: 200)
+2025-12-29 15:16:52,017 - pipeline - INFO - Generating embeddings for 1 chunks
+2025-12-29 15:16:54,575 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2025-12-29 15:16:54,606 - embedding - INFO - Processed batch 1 of embeddings (1 texts)
+2025-12-29 15:16:54,606 - embedding - INFO - Generated embeddings for 1 texts in 1108.74ms
+2025-12-29 15:16:54,607 - embedding - INFO - Added embeddings to 1 chunks
+2025-12-29 15:16:54,607 - pipeline - INFO - Storing embeddings in Qdrant
+2025-12-29 15:16:56,434 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-12-29 15:16:57,099 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-12-29 15:16:57,101 - storage - WARNING - Attempt 1 failed: 'Cosine'. Retrying in 1.0s...
+2025-12-29 15:16:58,102 - storage - WARNING - Attempt 2 failed: 'Cosine'. Retrying in 2.0s...
+2025-12-29 15:17:00,103 - storage - ERROR - All 3 attempts failed: 'Cosine'
+2025-12-29 15:17:00,104 - storage - ERROR - Error creating collection 'rag_content': 'Cosine'
+2025-12-29 15:17:00,104 - pipeline - ERROR - Error during storage: Failed to create collection: 'Cosine'
+2025-12-29 15:17:00,105 - pipeline - ERROR - Pipeline failed: Failed to create collection: 'Cosine'
+2025-12-29 15:17:00,105 - shutdown_handler - INFO - Pipeline completed with result: failed
+2025-12-29 15:17:00,105 - shutdown_handler - INFO - Graceful shutdown handler cleaned up
+2025-12-29 15:17:00,106 - __main__ - ERROR - Pipeline failed: Unknown error
+2025-12-29 15:24:28,534 - __main__ - INFO - Starting URL ingestion and embedding pipeline with graceful shutdown handling
+2025-12-29 15:24:28,535 - shutdown_handler - INFO - Starting pipeline with graceful shutdown handling
+2025-12-29 15:24:28,535 - shutdown_handler - INFO - Graceful shutdown handler initialized
+2025-12-29 15:24:28,535 - shutdown_handler - INFO - Pipeline shutdown handler configured
+2025-12-29 15:24:28,535 - pipeline - INFO - Starting ingestion for 1 URLs
+2025-12-29 15:24:28,535 - ingestion - INFO - Ingesting content from https://book-creation-hackathon-mu.vercel.app/ (attempt 1)
+2025-12-29 15:24:28,739 - ingestion - INFO - Successfully ingested 465 characters from https://book-creation-hackathon-mu.vercel.app/
+2025-12-29 15:24:28,740 - pipeline - INFO - Cleaning content from 1 URLs
+2025-12-29 15:24:28,740 - pipeline - INFO - Chunking content
+2025-12-29 15:24:28,741 - chunking - INFO - Chunked content from https://book-creation-hackathon-mu.vercel.app/ into 1 chunks (size: 1000, overlap: 200)
+2025-12-29 15:24:28,741 - pipeline - INFO - Generating embeddings for 1 chunks
+2025-12-29 15:24:30,465 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2025-12-29 15:24:30,482 - embedding - INFO - Processed batch 1 of embeddings (1 texts)
+2025-12-29 15:24:30,482 - embedding - INFO - Generated embeddings for 1 texts in 762.06ms
+2025-12-29 15:24:30,482 - embedding - INFO - Added embeddings to 1 chunks
+2025-12-29 15:24:30,482 - pipeline - INFO - Storing embeddings in Qdrant
+2025-12-29 15:24:32,364 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-12-29 15:24:33,981 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-12-29 15:24:33,984 - storage - WARNING - Attempt 1 failed: 'Cosine'. Retrying in 1.0s...
+2025-12-29 15:24:34,985 - storage - WARNING - Attempt 2 failed: 'Cosine'. Retrying in 2.0s...
+2025-12-29 15:24:36,986 - storage - ERROR - All 3 attempts failed: 'Cosine'
+2025-12-29 15:24:36,986 - storage - ERROR - Error creating collection 'rag_content': 'Cosine'
+2025-12-29 15:24:36,986 - pipeline - ERROR - Error during storage: Failed to create collection: 'Cosine'
+2025-12-29 15:24:36,986 - pipeline - ERROR - Pipeline failed: Failed to create collection: 'Cosine'
+2025-12-29 15:24:36,986 - shutdown_handler - INFO - Pipeline completed with result: failed
+2025-12-29 15:24:36,987 - shutdown_handler - INFO - Graceful shutdown handler cleaned up
+2025-12-29 15:24:36,987 - __main__ - ERROR - Pipeline failed: Unknown error
+2025-12-29 15:26:59,832 - __main__ - INFO - Starting URL ingestion and embedding pipeline with graceful shutdown handling
+2025-12-29 15:26:59,833 - shutdown_handler - INFO - Starting pipeline with graceful shutdown handling
+2025-12-29 15:26:59,833 - shutdown_handler - INFO - Graceful shutdown handler initialized
+2025-12-29 15:26:59,833 - shutdown_handler - INFO - Pipeline shutdown handler configured
+2025-12-29 15:26:59,833 - pipeline - INFO - Starting ingestion for 1 URLs
+2025-12-29 15:26:59,833 - ingestion - INFO - Ingesting content from https://book-creation-hackathon-mu.vercel.app/ (attempt 1)
+2025-12-29 15:27:00,106 - ingestion - INFO - Successfully ingested 465 characters from https://book-creation-hackathon-mu.vercel.app/
+2025-12-29 15:27:00,107 - pipeline - INFO - Cleaning content from 1 URLs
+2025-12-29 15:27:00,107 - pipeline - INFO - Chunking content
+2025-12-29 15:27:00,108 - chunking - INFO - Chunked content from https://book-creation-hackathon-mu.vercel.app/ into 1 chunks (size: 1000, overlap: 200)
+2025-12-29 15:27:00,108 - pipeline - INFO - Generating embeddings for 1 chunks
+2025-12-29 15:27:01,530 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2025-12-29 15:27:01,542 - embedding - INFO - Processed batch 1 of embeddings (1 texts)
+2025-12-29 15:27:01,542 - embedding - INFO - Generated embeddings for 1 texts in 378.89ms
+2025-12-29 15:27:01,542 - embedding - INFO - Added embeddings to 1 chunks
+2025-12-29 15:27:01,542 - pipeline - INFO - Storing embeddings in Qdrant
+2025-12-29 15:27:03,231 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-12-29 15:27:03,871 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-12-29 15:27:03,872 - storage - WARNING - Attempt 1 failed: type object 'Distance' has no attribute 'Cosine'. Retrying in 1.0s...
+2025-12-29 15:27:04,873 - storage - WARNING - Attempt 2 failed: type object 'Distance' has no attribute 'Cosine'. Retrying in 2.0s...
+2025-12-29 15:27:06,874 - storage - ERROR - All 3 attempts failed: type object 'Distance' has no attribute 'Cosine'
+2025-12-29 15:27:06,875 - storage - ERROR - Error creating collection 'rag_content': type object 'Distance' has no attribute 'Cosine'
+2025-12-29 15:27:06,875 - pipeline - ERROR - Error during storage: Failed to create collection: type object 'Distance' has no attribute 'Cosine'
+2025-12-29 15:27:06,875 - pipeline - ERROR - Pipeline failed: Failed to create collection: type object 'Distance' has no attribute 'Cosine'
+2025-12-29 15:27:06,875 - shutdown_handler - INFO - Pipeline completed with result: failed
+2025-12-29 15:27:06,875 - shutdown_handler - INFO - Graceful shutdown handler cleaned up
+2025-12-29 15:27:06,875 - __main__ - ERROR - Pipeline failed: Unknown error
+2025-12-29 15:28:57,626 - __main__ - INFO - Starting URL ingestion and embedding pipeline with graceful shutdown handling
+2025-12-29 15:28:57,626 - shutdown_handler - INFO - Starting pipeline with graceful shutdown handling
+2025-12-29 15:28:57,626 - shutdown_handler - INFO - Graceful shutdown handler initialized
+2025-12-29 15:28:57,626 - shutdown_handler - INFO - Pipeline shutdown handler configured
+2025-12-29 15:28:57,626 - pipeline - INFO - Starting ingestion for 1 URLs
+2025-12-29 15:28:57,626 - ingestion - INFO - Ingesting content from https://book-creation-hackathon-mu.vercel.app/ (attempt 1)
+2025-12-29 15:28:57,830 - ingestion - INFO - Successfully ingested 465 characters from https://book-creation-hackathon-mu.vercel.app/
+2025-12-29 15:28:57,831 - pipeline - INFO - Cleaning content from 1 URLs
+2025-12-29 15:28:57,831 - pipeline - INFO - Chunking content
+2025-12-29 15:28:57,832 - chunking - INFO - Chunked content from https://book-creation-hackathon-mu.vercel.app/ into 1 chunks (size: 1000, overlap: 200)
+2025-12-29 15:28:57,832 - pipeline - INFO - Generating embeddings for 1 chunks
+2025-12-29 15:28:59,243 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2025-12-29 15:28:59,258 - embedding - INFO - Processed batch 1 of embeddings (1 texts)
+2025-12-29 15:28:59,258 - embedding - INFO - Generated embeddings for 1 texts in 360.15ms
+2025-12-29 15:28:59,258 - embedding - INFO - Added embeddings to 1 chunks
+2025-12-29 15:28:59,259 - pipeline - INFO - Storing embeddings in Qdrant
+2025-12-29 15:29:00,928 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-12-29 15:29:01,558 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-12-29 15:29:01,944 - httpx - INFO - HTTP Request: PUT https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections/rag_content "HTTP/1.1 200 OK"
+2025-12-29 15:29:01,947 - storage - INFO - Created collection 'rag_content' in Qdrant
+2025-12-29 15:29:02,179 - httpx - INFO - HTTP Request: PUT https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections/rag_content/points?wait=true "HTTP/1.1 400 Bad Request"
+2025-12-29 15:29:02,183 - storage - WARNING - Attempt 1 failed: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Format error in JSON body: value chunk_502a6de4_0000 is not a valid point ID, valid values are either an unsigned integer or a UUID"},"time":0.0}'. Retrying in 1.0s...
+2025-12-29 15:29:03,399 - httpx - INFO - HTTP Request: PUT https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections/rag_content/points?wait=true "HTTP/1.1 400 Bad Request"
+2025-12-29 15:29:03,400 - storage - WARNING - Attempt 2 failed: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Format error in JSON body: value chunk_502a6de4_0000 is not a valid point ID, valid values are either an unsigned integer or a UUID"},"time":0.0}'. Retrying in 2.0s...
+2025-12-29 15:29:05,614 - httpx - INFO - HTTP Request: PUT https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections/rag_content/points?wait=true "HTTP/1.1 400 Bad Request"
+2025-12-29 15:29:05,615 - storage - ERROR - All 3 attempts failed: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Format error in JSON body: value chunk_502a6de4_0000 is not a valid point ID, valid values are either an unsigned integer or a UUID"},"time":0.0}'
+2025-12-29 15:29:05,615 - storage - ERROR - Error storing batch 1 after 3 attempts: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Format error in JSON body: value chunk_502a6de4_0000 is not a valid point ID, valid values are either an unsigned integer or a UUID"},"time":0.0}'
+2025-12-29 15:29:05,615 - storage - INFO - Successfully stored 0 chunks in Qdrant collection 'rag_content'
+2025-12-29 15:29:05,615 - pipeline - INFO - Pipeline completed successfully: 1 URLs processed, 0 chunks stored
+2025-12-29 15:29:05,615 - shutdown_handler - INFO - Pipeline completed with result: success
+2025-12-29 15:29:05,615 - shutdown_handler - INFO - Graceful shutdown handler cleaned up
+2025-12-29 15:29:05,615 - __main__ - INFO - Pipeline completed successfully.
+2025-12-29 15:29:05,615 - __main__ - INFO -   - URLs processed: 1
+2025-12-29 15:29:05,616 - __main__ - INFO -   - Chunks stored: 0
+2025-12-29 15:29:05,616 - __main__ - INFO -   - Total chunks created: 1
+2025-12-29 15:29:05,616 - __main__ - INFO -   - Total time: 7.99 seconds
+2025-12-29 15:29:05,616 - __main__ - INFO - No errors encountered during processing.
+2025-12-29 15:29:39,432 - __main__ - INFO - Starting URL ingestion and embedding pipeline with graceful shutdown handling
+2025-12-29 15:29:39,432 - shutdown_handler - INFO - Starting pipeline with graceful shutdown handling
+2025-12-29 15:29:39,432 - shutdown_handler - INFO - Graceful shutdown handler initialized
+2025-12-29 15:29:39,432 - shutdown_handler - INFO - Pipeline shutdown handler configured
+2025-12-29 15:29:39,432 - pipeline - INFO - Starting ingestion for 1 URLs
+2025-12-29 15:29:39,432 - ingestion - INFO - Ingesting content from https://book-creation-hackathon-mu.vercel.app/ (attempt 1)
+2025-12-29 15:29:39,636 - ingestion - INFO - Successfully ingested 465 characters from https://book-creation-hackathon-mu.vercel.app/
+2025-12-29 15:29:39,637 - pipeline - INFO - Cleaning content from 1 URLs
+2025-12-29 15:29:39,637 - pipeline - INFO - Chunking content
+2025-12-29 15:29:39,637 - chunking - INFO - Chunked content from https://book-creation-hackathon-mu.vercel.app/ into 1 chunks (size: 1000, overlap: 200)
+2025-12-29 15:29:39,638 - pipeline - INFO - Generating embeddings for 1 chunks
+2025-12-29 15:29:41,378 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2025-12-29 15:29:41,403 - embedding - INFO - Processed batch 1 of embeddings (1 texts)
+2025-12-29 15:29:41,403 - embedding - INFO - Generated embeddings for 1 texts in 796.50ms
+2025-12-29 15:29:41,403 - embedding - INFO - Added embeddings to 1 chunks
+2025-12-29 15:29:41,404 - pipeline - INFO - Storing embeddings in Qdrant
+2025-12-29 15:29:43,212 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-12-29 15:29:43,831 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-12-29 15:29:43,833 - storage - INFO - Collection 'rag_content' already exists in Qdrant
+2025-12-29 15:29:44,051 - httpx - INFO - HTTP Request: PUT https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections/rag_content/points?wait=true "HTTP/1.1 200 OK"
+2025-12-29 15:29:44,060 - storage - INFO - Stored batch 1 (1 chunks) in Qdrant
+2025-12-29 15:29:44,060 - storage - INFO - Successfully stored 1 chunks in Qdrant collection 'rag_content'
+2025-12-29 15:29:44,061 - pipeline - INFO - Pipeline completed successfully: 1 URLs processed, 1 chunks stored
+2025-12-29 15:29:44,061 - shutdown_handler - INFO - Pipeline completed with result: success
+2025-12-29 15:29:44,061 - shutdown_handler - INFO - Graceful shutdown handler cleaned up
+2025-12-29 15:29:44,061 - __main__ - INFO - Pipeline completed successfully.
+2025-12-29 15:29:44,061 - __main__ - INFO -   - URLs processed: 1
+2025-12-29 15:29:44,061 - __main__ - INFO -   - Chunks stored: 1
+2025-12-29 15:29:44,061 - __main__ - INFO -   - Total chunks created: 1
+2025-12-29 15:29:44,061 - __main__ - INFO -   - Total time: 4.63 seconds
+2025-12-29 15:29:44,061 - __main__ - INFO - No errors encountered during processing.
+2025-12-30 13:32:33,292 - __main__ - INFO - Starting URL ingestion and embedding pipeline with graceful shutdown handling
+2025-12-30 13:32:33,292 - shutdown_handler - INFO - Starting pipeline with graceful shutdown handling
+2025-12-30 13:32:33,293 - shutdown_handler - INFO - Graceful shutdown handler initialized
+2025-12-30 13:32:33,293 - shutdown_handler - INFO - Pipeline shutdown handler configured
+2025-12-30 13:32:33,294 - pipeline - INFO - Starting ingestion for 1 URLs
+2025-12-30 13:32:33,294 - ingestion - INFO - Ingesting content from https://book-creation-hackathon-mu.vercel.app/ (attempt 1)
+2025-12-30 13:32:33,599 - ingestion - INFO - Successfully ingested 465 characters from https://book-creation-hackathon-mu.vercel.app/
+2025-12-30 13:32:33,612 - pipeline - INFO - Cleaning content from 1 URLs
+2025-12-30 13:32:33,627 - pipeline - INFO - Chunking content
+2025-12-30 13:32:33,628 - chunking - INFO - Chunked content from https://book-creation-hackathon-mu.vercel.app/ into 1 chunks (size: 1000, overlap: 200)
+2025-12-30 13:32:33,629 - pipeline - INFO - Generating embeddings for 1 chunks
+2025-12-30 13:32:35,846 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2025-12-30 13:32:35,920 - embedding - INFO - Processed batch 1 of embeddings (1 texts)
+2025-12-30 13:32:35,921 - embedding - INFO - Generated embeddings for 1 texts in 443.40ms
+2025-12-30 13:32:35,923 - embedding - INFO - Added embeddings to 1 chunks
+2025-12-30 13:32:35,924 - pipeline - INFO - Storing embeddings in Qdrant
+2025-12-30 13:32:38,363 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-12-30 13:32:39,222 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-12-30 13:32:39,227 - storage - INFO - Collection 'rag_content' already exists in Qdrant
+2025-12-30 13:32:39,545 - httpx - INFO - HTTP Request: PUT https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections/rag_content/points?wait=true "HTTP/1.1 200 OK"
+2025-12-30 13:32:39,551 - storage - INFO - Stored batch 1 (1 chunks) in Qdrant
+2025-12-30 13:32:39,552 - storage - INFO - Successfully stored 1 chunks in Qdrant collection 'rag_content'
+2025-12-30 13:32:39,557 - pipeline - INFO - Pipeline completed successfully: 1 URLs processed, 1 chunks stored
+2025-12-30 13:32:39,559 - shutdown_handler - INFO - Pipeline completed with result: success
+2025-12-30 13:32:39,560 - shutdown_handler - INFO - Graceful shutdown handler cleaned up
+2025-12-30 13:32:39,561 - __main__ - INFO - Pipeline completed successfully.
+2025-12-30 13:32:39,563 - __main__ - INFO -   - URLs processed: 1
+2025-12-30 13:32:39,564 - __main__ - INFO -   - Chunks stored: 1
+2025-12-30 13:32:39,567 - __main__ - INFO -   - Total chunks created: 1
+2025-12-30 13:32:39,568 - __main__ - INFO -   - Total time: 6.26 seconds
+2025-12-30 13:32:39,571 - __main__ - INFO - No errors encountered during processing.
+2025-12-30 13:49:19,705 - __main__ - INFO - Starting URL ingestion and embedding pipeline with graceful shutdown handling
+2025-12-30 13:49:19,705 - shutdown_handler - INFO - Starting pipeline with graceful shutdown handling
+2025-12-30 13:49:19,706 - shutdown_handler - INFO - Graceful shutdown handler initialized
+2025-12-30 13:49:19,706 - shutdown_handler - INFO - Pipeline shutdown handler configured
+2025-12-30 13:49:19,706 - pipeline - INFO - Starting ingestion for 1 URLs
+2025-12-30 13:49:19,706 - ingestion - INFO - Ingesting content from https://example.com (attempt 1)
+2025-12-30 13:49:19,815 - ingestion - INFO - Successfully ingested 127 characters from https://example.com
+2025-12-30 13:49:19,816 - pipeline - INFO - Cleaning content from 1 URLs
+2025-12-30 13:49:19,819 - pipeline - INFO - Chunking content
+2025-12-30 13:49:19,820 - chunking - INFO - Chunked content from https://example.com into 1 chunks (size: 1000, overlap: 200)
+2025-12-30 13:49:19,820 - pipeline - INFO - Generating embeddings for 1 chunks
+2025-12-30 13:49:21,298 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2025-12-30 13:49:21,319 - embedding - INFO - Processed batch 1 of embeddings (1 texts)
+2025-12-30 13:49:21,319 - embedding - INFO - Generated embeddings for 1 texts in 506.73ms
+2025-12-30 13:49:21,320 - embedding - INFO - Added embeddings to 1 chunks
+2025-12-30 13:49:21,320 - pipeline - INFO - Storing embeddings in Qdrant
+2025-12-30 13:49:23,341 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-12-30 13:49:24,359 - httpx - INFO - HTTP Request: GET https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2025-12-30 13:49:24,360 - storage - INFO - Collection 'rag_content' already exists in Qdrant
+2025-12-30 13:49:24,673 - httpx - INFO - HTTP Request: PUT https://d0b61fdf-6000-44c6-b8e7-98053c20e456.us-east4-0.gcp.cloud.qdrant.io:6333/collections/rag_content/points?wait=true "HTTP/1.1 200 OK"
+2025-12-30 13:49:24,676 - storage - INFO - Stored batch 1 (1 chunks) in Qdrant
+2025-12-30 13:49:24,676 - storage - INFO - Successfully stored 1 chunks in Qdrant collection 'rag_content'
+2025-12-30 13:49:24,677 - pipeline - INFO - Pipeline completed successfully: 1 URLs processed, 1 chunks stored
+2025-12-30 13:49:24,678 - shutdown_handler - INFO - Pipeline completed with result: success
+2025-12-30 13:49:24,678 - shutdown_handler - INFO - Graceful shutdown handler cleaned up
+2025-12-30 13:49:24,678 - __main__ - INFO - Pipeline completed successfully.
+2025-12-30 13:49:24,679 - __main__ - INFO -   - URLs processed: 1
+2025-12-30 13:49:24,679 - __main__ - INFO -   - Chunks stored: 1
+2025-12-30 13:49:24,679 - __main__ - INFO -   - Total chunks created: 1
+2025-12-30 13:49:24,679 - __main__ - INFO -   - Total time: 4.97 seconds
+2025-12-30 13:49:24,680 - __main__ - INFO - No errors encountered during processing.
