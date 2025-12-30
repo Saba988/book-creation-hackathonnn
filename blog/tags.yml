@@ -1,3 +1,93 @@
+ros2:
+  label: ROS 2
+  permalink: /ros2
+  description: ROS 2 (Robot Operating System 2) related content
+
+middleware:
+  label: Middleware
+  permalink: /middleware
+  description: Robot middleware systems
+
+gazebo:
+  label: Gazebo
+  permalink: /gazebo
+  description: Gazebo physics simulation content
+
+unity:
+  label: Unity
+  permalink: /unity
+  description: Unity 3D simulation content
+
+digital-twin:
+  label: Digital Twin
+  permalink: /digital-twin
+  description: Digital twin technology for robotics
+
+simulation:
+  label: Simulation
+  permalink: /simulation
+  description: Robotics simulation content
+
+physics:
+  label: Physics
+  permalink: /physics
+  description: Physics simulation for robotics
+
+ai:
+  label: AI
+  permalink: /ai
+  description: Artificial Intelligence in robotics
+
+nvidia:
+  label: NVIDIA
+  permalink: /nvidia
+  description: NVIDIA robotics platforms
+
+robot-brain:
+  label: Robot Brain
+  permalink: /robot-brain
+  description: Robot intelligence and control systems
+
+perception:
+  label: Perception
+  permalink: /perception
+  description: Robot perception systems
+
+isaac:
+  label: NVIDIA Isaac
+  permalink: /nvidia-isaac
+  description: NVIDIA Isaac robotics platform
+
+robotics:
+  label: Robotics
+  permalink: /robotics
+  description: General robotics content
+
+humanoid:
+  label: Humanoid Robotics
+  permalink: /humanoid
+  description: Humanoid robot development
+
+vla:
+  label: Vision-Language-Action
+  permalink: /vla
+  description: Vision-Language-Action robotics
+
+vision-language-action:
+  label: Vision-Language-Action
+  permalink: /vision-language-action
+  description: Vision-Language-Action robotics
+
+multimodal-ai:
+  label: Multimodal AI
+  permalink: /multimodal-ai
+  description: AI systems using multiple modalities
+
+nlp:
+  label: Natural Language Processing
+  permalink: /nlp
+  description: NLP for robotics applications
+
 facebook:
   label: Facebook
   permalink: /facebook

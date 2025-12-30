@@ -1,11 +1,11 @@
 ---
 sidebar_position: 1
-title: 'Module 2: The Digital Twin (Gazebo & Unity)'
+title: 'Module 2: Virtual Worlds for Physical AI'
 ---
 
-# Module 2: The Digital Twin (Gazebo & Unity)
+# Module 2: Virtual Worlds for Physical AI
 
-Welcome to the Digital Twin course for Physical AI & Humanoid Robotics! This module focuses on creating and using digital twins for humanoid robots using Gazebo and Unity simulation environments.
+Welcome to the Virtual Worlds course for Physical AI & Humanoid Robotics! This module focuses on creating immersive simulation environments where your AI agents can learn and master humanoid robot control using Gazebo and Unity physics-based simulators.
 
 ## Course Overview
 

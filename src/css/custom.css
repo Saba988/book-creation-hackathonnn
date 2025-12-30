@@ -1,0 +1,78 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #1a6dff; /* Blue for ROS/robotics theme */
+  --ifm-color-primary-dark: #0d5ce6;
+  --ifm-color-primary-darker: #0c55d9;
+  --ifm-color-primary-darkest: #0a47b3;
+  --ifm-color-primary-light: #337dff;
+  --ifm-color-primary-lighter: #4087ff;
+  --ifm-color-primary-lightest: #66a3ff;
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(26, 109, 255, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #4d94ff;
+  --ifm-color-primary-dark: #3385ff;
+  --ifm-color-primary-darker: #267dff;
+  --ifm-color-primary-darkest: #0d66cc;
+  --ifm-color-primary-light: #66a3ff;
+  --ifm-color-primary-lighter: #7fb3ff;
+  --ifm-color-primary-lightest: #a3cfff;
+  --docusaurus-highlighted-code-line-bg: rgba(26, 109, 255, 0.3);
+}
+
+/* Custom styles for educational content */
+.admonition {
+  border-left-width: 4px;
+}
+
+.admonition-note {
+  border-left-color: var(--ifm-color-info-dark);
+}
+
+.admonition-tip {
+  border-left-color: var(--ifm-color-success-dark);
+}
+
+.admonition-caution {
+  border-left-color: var(--ifm-color-warning-dark);
+}
+
+.admonition-warning {
+  border-left-color: var(--ifm-color-danger-dark);
+}
+
+/* Code block styling for better readability */
+.code-block {
+  margin-bottom: 1rem;
+}
+
+/* Better spacing for educational content */
+.markdown h1, .markdown h2, .markdown h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.markdown p {
+  margin-bottom: 1rem;
+}
+
+/* Styling for exercise sections */
+.practical-exercise {
+  background-color: rgba(26, 109, 255, 0.05);
+  border-left: 4px solid var(--ifm-color-primary);
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.practical-exercise h4 {
+  margin-top: 0;
+}

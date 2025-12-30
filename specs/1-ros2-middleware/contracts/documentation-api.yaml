@@ -1,0 +1,52 @@
+# API Contract: Documentation Endpoints
+
+## Overview
+This document describes the API contracts for the Docusaurus-based documentation site for Module 1: The Robotic Nervous System (ROS 2).
+
+## Endpoints
+
+### GET /docs/module-1/
+**Description**: Module 1 landing page with overview and navigation
+
+**Response**:
+- Status: 200 OK
+- Content-Type: text/html
+- Body: HTML page with module overview
+
+### GET /docs/module-1/chapter-1-ros2-basics
+**Description**: ROS 2 Basics chapter content
+
+**Response**:
+- Status: 200 OK
+- Content-Type: text/html
+- Body: HTML page with ROS 2 basics content
+
+### GET /docs/module-1/chapter-2-rclpy-ai-agents
+**Description**: rclpy AI Agents chapter content
+
+**Response**:
+- Status: 200 OK
+- Content-Type: text/html
+- Body: HTML page with rclpy AI agents content
+
+### GET /docs/module-1/chapter-3-urdf-modeling
+**Description**: URDF Modeling chapter content
+
+**Response**:
+- Status: 200 OK
+- Content-Type: text/html
+- Body: HTML page with URDF modeling content
+
+## Common Response Headers
+- Content-Type: text/html
+- Cache-Control: public, max-age=3600
+- Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';
+
+## Error Responses
+- 404 Not Found: Requested documentation page does not exist
+- 500 Internal Server Error: Server error occurred while serving documentation
+
+## Security
+- All endpoints are publicly accessible
+- No authentication required
+- All content is static and pre-generated

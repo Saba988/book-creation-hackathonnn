@@ -1,3 +1,11 @@
+ai-robotics-team:
+  name: AI Robotics Team
+  title: Physical AI & Humanoid Robotics Development Team
+  image_url: https://github.com/ai-robotics-team.png
+  page: true
+  socials:
+    github: ai-robotics-team
+
 yangshun:
   name: Yangshun Tay
   title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd

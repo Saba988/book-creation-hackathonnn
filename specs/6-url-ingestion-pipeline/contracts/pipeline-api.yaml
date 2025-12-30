@@ -1,0 +1,73 @@
+# API Contract: URL Ingestion Pipeline
+# Since this is primarily a pipeline script, this represents the main function interface
+
+openapi: 3.0.0
+info:
+  title: URL Ingestion Pipeline
+  version: 1.0.0
+  description: Pipeline for ingesting URLs, processing content, generating embeddings, and storing in vector database
+
+paths:
+  /run:
+    post:
+      summary: Execute the full pipeline
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                source_urls:
+                  type: array
+                  items:
+                    type: string
+                  description: List of URLs to process
+                cohere_api_key:
+                  type: string
+                  description: Cohere API key
+                qdrant_url:
+                  type: string
+                  description: Qdrant Cloud URL
+                qdrant_api_key:
+                  type: string
+                  description: Qdrant API key
+                chunk_size:
+                  type: integer
+                  default: 1000
+                  description: Size of text chunks
+                chunk_overlap:
+                  type: integer
+                  default: 200
+                  description: Overlap between chunks
+              required:
+                - source_urls
+                - cohere_api_key
+                - qdrant_url
+                - qdrant_api_key
+      responses:
+        '200':
+          description: Pipeline completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    enum: [success, failed]
+                  processed_count:
+                    type: integer
+                    description: Number of URLs processed
+                  stored_count:
+                    type: integer
+                    description: Number of chunks stored
+                  errors:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        url:
+                          type: string
+                        error:
+                          type: string
